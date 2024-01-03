@@ -12,7 +12,13 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://log-blogs.vercel.app'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  })
+);
 
 //MONGOOSE
 const mongoose = require('mongoose');
