@@ -10,9 +10,7 @@ const Post = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const { data } = await http.get(
-        `https://blog-app-omega-eight.vercel.app/api/posts/${postId}`
-      );
+      const { data } = await http.get(`/api/posts/${postId}`);
       setPost(data.data.post);
     }
     fetchData();
@@ -21,7 +19,9 @@ const Post = () => {
   //Delete post
 
   const deletePost = async () => {
-    await http.delete(`/api/posts/${postId}`);
+    await http.delete(
+      `https://mern-blog-app-nbrn.onrender.com/api/posts/${postId}`
+    );
     Navigate('/');
   };
 

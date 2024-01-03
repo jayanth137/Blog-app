@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       const { data } = await http.get(
-        'https://blog-app-omega-eight.vercel.app/api/posts'
+        'https://mern-blog-app-nbrn.onrender.com/api/posts'
       );
       setPosts(data.data.posts);
       console.log(data.posts);

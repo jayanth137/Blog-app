@@ -12,13 +12,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-app.use(
-  cors({
-    origin: ['https://blog-app-client-phi.vercel.app'],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  })
-);
+app.use(cors());
 
 //MONGOOSE
 const mongoose = require('mongoose');
