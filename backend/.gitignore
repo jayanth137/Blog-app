@@ -1,0 +1,29 @@
+# Ignore compiled files
+*.class
+*.o
+*.pyc
+
+# Ignore build directories
+/build/
+/bin/
+
+# Ignore log files
+*.log
+
+# Ignore environment-specific files
+.env
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore package-lock.json for Node.js projects
+package-lock.json
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore sensitive or personal information
+secrets.txt
