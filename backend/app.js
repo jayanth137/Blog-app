@@ -8,15 +8,25 @@ var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/post');
 
 var app = express();
+const cors = require('cors');
+
+require('dotenv').config();
+
+app.use(cors());
 
 //MONGOOSE
 const mongoose = require('mongoose');
 
-main().catch((err) => console.log(err));
+const databaseUri = process.env.ATLAS_URI;
 
-async function main() {
-  await mongoose.connect('mongodb://localhost:27017/test');
-}
+// and then the connection function
+
+mongoose
+  .connect(databaseUri)
+  .then(() => {
+    console.log('MongoDB Connected');
+  })
+  .catch((err) => console.log(err));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +45,8 @@ app.use('/api/posts', postsRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+// Add Access Control Allow Origin headers
 
 // error handler
 app.use(function (err, req, res, next) {
