@@ -11,7 +11,7 @@ const Post = () => {
   useEffect(() => {
     async function fetchData() {
       const { data } = await http.get(
-        `https://mern-blog-app-nbrn.onrender.com/api/posts/api/posts/${postId}`
+        `https://mern-blog-app-nbrn.onrender.com/api/posts/${postId}`
       );
       setPost(data.data.post);
     }
