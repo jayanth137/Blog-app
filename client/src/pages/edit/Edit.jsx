@@ -26,7 +26,10 @@ const Edit = () => {
       tags,
       content,
     };
-    await http.put(`/api/posts/${postId}`, { data: payload });
+    await http.put(
+      `https://mern-blog-app-nbrn.onrender.com/api/posts/${postId}`,
+      { data: payload }
+    );
     navigate(`/posts/${postId}`);
   };
 
