@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "start": "node ./bin/www",
-    "build-client": "cd ./client && npm build"
+   
   },
   "dependencies": {
     "axios": "^1.6.3",
