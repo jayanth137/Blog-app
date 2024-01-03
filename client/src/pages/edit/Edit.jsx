@@ -11,7 +11,9 @@ const Edit = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const { data } = await http.get(`/api/posts/${postId}`);
+      const { data } = await http.get(
+        `https://blog-app-omega-eight.vercel.app/api/posts/${postId}`
+      );
       reset(data.data.post);
     }
     fetchData();

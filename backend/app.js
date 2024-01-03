@@ -14,7 +14,7 @@ require('dotenv').config();
 
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://log-blogs.vercel.app'],
+    origin: ['https://blog-app-client-phi.vercel.app/'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   })

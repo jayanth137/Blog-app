@@ -14,7 +14,9 @@ const Create = () => {
       tags,
       content,
     };
-    await http.post('/api/posts', { data: payload });
+    await http.post('https://blog-app-omega-eight.vercel.app/api/posts', {
+      data: payload,
+    });
     navigate('/');
   };
 
