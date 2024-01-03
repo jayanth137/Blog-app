@@ -14,7 +14,7 @@ const Create = () => {
       tags,
       content,
     };
-    await http.post('https://blog-app-omega-eight.vercel.app/api/posts', {
+    await http.post('https://mern-blog-app-nbrn.onrender.com/api/posts', {
       data: payload,
     });
     navigate('/');
